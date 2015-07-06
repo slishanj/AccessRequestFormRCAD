@@ -1,0 +1,78 @@
+                <tr>
+                            <script type="text/javascript">
+                                function VISIBILITY(elemID) {
+                                    if (document.getElementById(elemID).style.visibility === "hidden") {
+                                        document.getElementById(elemID).style.visibility = "visible";
+                                        document.getElementById(elemID).style.display = 'table-row';
+                                    } else {
+                                        document.getElementById(elemID).style.visibility = "hidden";
+                                        document.getElementById(elemID).style.display = 'none';
+                                    }
+                                }
+                            </script>
+                            <style type="text/css" >
+                                #sun:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <td id="sun" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('sunset');">
+                                SUN SYSTEM
+                            </td>
+                            </tr>
+                            <style type="text/css">
+                                #sunsetTable{table-layout: fixed;}
+                                #sunsetTable td{width: max-content}
+                                #sunsetTable input[type='checkbox']{padding-left: 20px;margin-left: 10px}
+                            </style>
+                            <tr id="sunset" style="visibility: hidden;display: none" >
+                                <td colspan="6">
+                                    <table id="sunsetTable" class="table table-striped" style="">
+                                        <tr>
+                                            <td>
+                                                AP1<input type="checkbox" name="accessList[]" value="SUN_AP1"/>
+                                            </td>
+                                            <td>AP2<input type="checkbox" name="accessList[]" value="SUN_AP2"/>
+                                            </td>
+                                            <td>CLR<input type="checkbox" name="accessList[]" value="SUN_CLR"/>
+                                            </td>
+                                            <td>CA1<input type="checkbox" name="accessList[]" value="SUN_CA1"/>
+                                            </td>
+                                            <td>CA2<input type="checkbox" name="accessList[]" value="SUN_CA2"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="">
+                                                CT1<input type="checkbox" name="accessList[]" value="SUN_CT1"/>
+                                            </td><td>CT2<input type="checkbox" name="accessList[]" value="SUN_CT2"/>
+                                            </td><td>CT3<input type="checkbox" name="accessList[]" value="SUN_CT3"/>
+                                            </td>
+                                            <td style="">
+                                                GC1<input type="checkbox" name="accessList[]" value="SUN_GC1"/>
+                                            </td><td>IJ1<input type="checkbox" name="accessList[]" value="SUN_IJ1"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>NOSEE<input type="checkbox" name="accessList[]" value="SUN_NOSEE"/>
+                                            </td>
+                                            <td style="">
+                                                READ<input type="checkbox" name="accessList[]" value="SUN_READ"/>
+                                            </td><td>TRN<input type="checkbox" name="accessList[]" value="SUN_TRN"/>
+                                            </td>
+                                            <td style="">
+                                                SUN Administrator<input type="checkbox" name="accessList[]" value="SUN_Administrator"/>
+                                            </td>
+                                            <td>Report Server Users<input type="checkbox" name="accessList[]" value="SUN_ReportServerUsers"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">SUN Domain Admin<input type="checkbox" name="accessList[]" value="SUN_DomainAdmin"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>

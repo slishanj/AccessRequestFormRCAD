@@ -1,0 +1,3 @@
+ var data_validation = '{"fb-submit-button":{"hover":{"background-image":""}},"item5_select_1":{"required":true},"item8_text_1":{"required":true},"item10_text_1":{"required":false},"item11_text_1":{},"item12_text_1":{},"item13_email_1":{"email":true},"item15_number_1":{"decimals":"zero","range":{"0":0,"1":999999999,"2":1},"required":true},"item16_0_checkbox":{"minlength":0,"required":false}}';
+ var data_jsplugins = '[]';
+ var data_cssplugins = '["http://fonts.googleapis.com/css?family=Oswald"]';

@@ -1,0 +1,61 @@
+<tr>
+                            <style type="text/css" >
+                                #OASYS_eHCM:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <td id="OASYS_eHCM" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('oasysset2');
+                                        VISIBILITY('oasysset2_list');">
+                                OASYS eHCM
+                            </td>
+                            </tr>
+                            <style type="text/css">
+                                #oasysset2 #oas2table input{float: right}
+                                #oasysset2 #oas2table td{padding-right: 20px;border-right: 1px #cccccc solid}
+                                #oasysset2 #oas2table td:last-child{padding-right: 0px;border-right: 0px #cccccc solid}
+                            </style>
+                            <tr id="oasysset2" style="visibility: hidden;display: none" >
+                                <td style="padding: 5px;" colspan="6">
+                                    <table id="oas2table" style="width: 100%" class="table table-striped"><tr>
+                                            <td style="">
+                                                Accommodation<input style="" type="checkbox" name="accessList[]" value="OASYS_eHCM_Accomodation"/>
+                                                <br>Department Admin<input type="checkbox" name="accessList[]" value="OASYS_eHCM_DeptAdmin"/>
+                                            </td>
+                                            <td style="">
+                                                Administrator<input type="checkbox" name="accessList[]" value="OASYS_eHCM_Administrator"/>
+                                                <br/>Emp.Development<input type="checkbox" name="accessList[]" value="OASYS_eHCM_EmpDevelopment"/>
+                                            </td>
+                                            <td style="">
+                                                HR Officers<input type="checkbox" name="accessList[]" value="OASYS_eHCM_HR_Officers"/>
+                                                <br>System Administrator<input type="checkbox" name="accessList[]" value="OASYS_eHCM_SystemAdmin"/>
+                                            </td>
+                                            <td style="">
+                                                Department Heads<input type="checkbox" name="accessList[]" value="OASYS_eHCM_DeptHeads"/>
+                                                <br>Finance<input type="checkbox" name="accessList[]" value="OASYS_eHCM_Finance"/>
+                                            </td>
+                                            <td style="">
+                                                DHR Access Only<input type="checkbox" name="accessList[]" value="OASYS_eHCM_DHRAccessOnly"/>
+                                                <br>GM Access Only<input type="checkbox" name="accessList[]" value="OASYS_eHCM_GMAccessOnly"/>
+                                            </td>
+                                            <td style="">
+                                                DOF Access Only<input type="checkbox" name="accessList[]" value="OASYS_eHCM_DOFAccessOnly"/>
+                                                <br>Human Resource<input type="checkbox" name="accessList[]" value="OASYS_eHCM_HR"/>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr id="oasysset2_list" style="visibility: hidden;display: none" >
+                                <td style="padding-top: 5px;padding-bottom: 15px" colspan="6">
+                                    List Department you require access to (Mandatory)
+                                    <input class="form-control" type="text" name="OASYS_eHCMdeptList" required 
+                                           placeholder="" value="nil - do not edit this field if you are not using this system!"
+                                           style="width: 100%;border: 1px red ridge;"/>
+                                </td>
+                            </tr>

@@ -1,0 +1,79 @@
+<tr>
+                            <style type="text/css" >
+                                #fmc:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                                #fmcset input{
+                                    margin-left: 10px
+                                }
+                            </style>
+                            <td id="fmc" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('fmcset');
+                                        VISIBILITY('fmcset_list');">
+                                FMC - MICROS FIDELIO MATERIALS CONTROL
+                            </td>
+                            </tr>
+                            <tr id="fmcset" style="visibility: hidden;display: none" >
+                                <td style="padding: 5px;" colspan="6">
+                                    <table cellspacing="0"  style="width: 100%">
+                                        <tr style="background-color: #ADADFF">
+                                            <td><span style="text-transform: uppercase;font-weight: bold">
+                                                    Database Access</span></td>
+                                            <td>General Database<input type="checkbox" name="accessList[]" value="FMC_GeneralDB"/></td>
+                                            <td>F&amp;B Database<input type="checkbox" name="accessList[]" value="FMC_FnBDB"/></td>
+                                            <td>OPEQ Database<input type="checkbox" name="accessList[]" value="FMC_OPEQDB"/></td>
+                                            <td>HR Database<input type="checkbox" name="accessList[]" value="FMC_HRDB"/></td>
+                                        </tr>
+                                        <tr style="background-color: burlywood">
+                                            <td><span style="text-transform: uppercase;font-weight: bold">
+                                                    Authorization Level</span></td>
+                                            <td>GM/HM Level 3<input type="checkbox" name="accessList[]" value="FMC_GM_HM_L3"/></td>
+                                            <td>DOF/FC Level 2<input type="checkbox" name="accessList[]" value="FMC_DOC_FC_L2"/></td>
+                                            <td>Dept. Head L1<input type="checkbox" name="accessList[]" value="FMC_DeptHead_L1"/></td>
+                                            <td>Dept. L0<input type="checkbox" name="accessList[]" value="FMC_Dept_L0"/></td>
+                                        </tr>
+                                    </table>
+                                    <table cellspacing="0" class="table table-striped" style="width: 100%">
+                                        <tr>
+                                            <td>Accounting<input type="checkbox" name="accessList[]" value="FMC_Accounting"/></td>
+                                            <td>Club Lounge<input type="checkbox" name="accessList[]" value="FMC_ClubLounge"/></td>
+                                            <td>Division Heads<input type="checkbox" name="accessList[]" value="FMC_DivHeads"/></td>
+                                            <td>Exec. Office<input type="checkbox" name="accessList[]" value="FMC_ExecOffice"/></td>
+                                            <td>Finance<input type="checkbox" name="accessList[]" value="FMC_Finance"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>F &amp; B<input type="checkbox" name="accessList[]" value="FMC_FnB"/></td>
+                                            <td>Front Office<input type="checkbox" name="accessList[]" value="FMC_FrontOffice"/></td>
+                                            <td>Guest Relation<input type="checkbox" name="accessList[]" value="FMC_GuestRelations"/></td>
+                                            <td>Health Club<input type="checkbox" name="accessList[]" value="FMC_HealthClub"/></td>
+                                            <td>Loss Prevention<input type="checkbox" name="accessList[]" value="FMC_LP"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payable<input type="checkbox" name="accessList[]" value="FMC_Payable"/></td>
+                                            <td>Purchasing<input type="checkbox" name="accessList[]" value="FMC_Purchasing"/></td>
+                                            <td>Receiving<input type="checkbox" name="accessList[]" value="FMC_Receiving"/></td>
+                                            <td>Reservation<input type="checkbox" name="accessList[]" value="FMC_Reservation"/></td>
+                                            <td>Sales &amp; Marketing<input type="checkbox" name="accessList[]" value="FMC_SalesMarket"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Store Keeper<input type="checkbox" name="accessList[]" value="FMC_Store"/></td>
+                                            <td>System Administrator<input type="checkbox" name="accessList[]" value="FMC_SysAdmin"/></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table> 
+                                </td>
+                            </tr>
+                            <tr id="fmcset_list" style="visibility: hidden;display: none" >
+                                <td style="padding-top: 5px;padding-bottom: 15px" colspan="6">
+                                    Please mention Cost Center Required (Mandatory)
+                                    <input class="form-control" type="text" name="fmcdeptList" required 
+                                           placeholder="" value="nil - do not edit this field if you are not using this system!"
+                                           style="width: 100%;border: 1px red ridge;"/>
+                                </td>
+                            </tr>

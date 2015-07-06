@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Builder 2.1</title>
+
+  <script type="text/javascript" src="common/libs_js/jquery-1.4.4.min.js"></script>
+  <script type="text/javascript" src="common/libs_js/jquery-ui-1.8.9.custom.min.js"></script>
+
+  <!-- Like IE doesn't support JSON object, we add a javascript library (See http://www.json.org) -->
+  <!--[if IE]>
+  <script type="text/javascript" src="common/libs_js/json2.js"></script>
+  <![endif]-->
+
+  <script type="text/javascript" src="editordata/js/encoder.js"></script>
+  <script type="text/javascript" src="editordata/js/properties.js"></script>
+  <script type="text/javascript" src="editordata/js/container.js"></script>
+  <script type="text/javascript" src="editordata/js/toolbox.js"></script>
+  <script type="text/javascript" src="editordata/js/js_to_native_api.js"></script>
+  <script type="text/javascript" src="editordata/js/formbuilder.js"></script>
+  <script type="text/javascript" src="editordata/js/validation_config.js"></script>
+  <script type="text/javascript" src="editordata/js/payment_config.js"></script>
+
+  <!-- Plugin for beautify html -->
+  <script type="text/javascript" src="editordata/js/beautify-html.js"></script>
+
+  <!-- Plugin for color picker -->
+  <script type="text/javascript" src="editordata/js/colorpicker.js"></script>
+
+
+  <!-- Plugin for date picker -->
+  <script type="text/javascript" src="editordata/js/jquery.ui.datepicker.js" ></script>
+
+  <!-- Start includes for validation -->
+  <script type="text/javascript" src="common/js/jquery.validate.js"></script>
+  <script type="text/javascript" src="common/libs_js/jquery.metadata.js"></script>
+  <script type="text/javascript" src="common/js/validation.js"></script>
+  <!-- End includes for validation -->
+
+  <!-- Scripts for placeholder IE compatibility-->
+  <script type="text/javascript" src="common/libs_js/jquery.placeholder.min.js"></script>
+
+  <!-- CSS for color picker -->
+  <link rel="stylesheet"  type="text/css" href="editordata/css/mac_colorpicker.css" id="colorcss" />
+
+
+  <!-- CSS for date picker -->
+  <link rel="stylesheet" type="text/css" href="common/css/jquery-ui-1.8.5.custom.css" id="datecss" />
+
+  <!-- CSS for normlalize -->
+  <link rel="stylesheet" type="text/css" href="common/css/normalize.css" id="normalizecss" />
+
+  <link rel="canonical" href="http://www.coffeecup.com" />
+  <link rel="stylesheet" type="text/css" href="editordata/css/mac_ui.css" id="css_ui"/>
+  <link rel="stylesheet" type="text/css" href="theme/default/css/default.css" id="theme" />
+
+</head>
+<body>
+
+  <div class="ui-layout-center" id="layout-center"><form id="docContainer"  enctype="multipart/form-data" method="POST" action="" novalidate="novalidate"></form></div>
+  <div class="ui-layout-east" id="controls">
+    <div id="control_toolbar"><a href="#elements" id="elements">Elements</a><a href="#objectproperties" id="objectproperties">Properties</a><a href="#formproperties" id="formproperties">Form Options</a></div>
+    <form id="controlset" class="tabsform" method="get" action="">
+      <div id="tb_form_tools" class="controlpane">
+        <fieldset id="tool_group_basic" class="tool_group">
+          <legend>Basic</legend>
+          <div id="tool_heading" class="drag_tool" title="Click or drag to insert a Title/Heading"><span>Title/Heading</span></div>
+          <div id="tool_text" class="drag_tool" title="Click or drag to insert Plain Text"><span>Plain Text</span></div>
+          <div id="tool_textfield" class="drag_tool" title="Click or drag to insert a Text Field"><span>Text Field</span></div>
+          <div id="tool_textarea" class="drag_tool" title="Click or drag to insert a Text Area"><span>Text Area</span></div>
+          <div id="tool_number" class="drag_tool" title="Click or drag to insert a Number field"><span>Number</span></div>
+          <div id="tool_password" class="drag_tool" title="Click or drag to insert a Password field"><span>Password</span></div>
+          <div id="tool_dropdown" class="drag_tool" title="Click or drag to insert a Drop Down menu"><span>Drop Down</span></div>
+          <div id="tool_radio" class="drag_tool" title="Click or drag to insert Radio Buttons"><span>Radio Buttons</span></div>
+          <div id="tool_checkbox" class="drag_tool" title="Click or drag to insert Checkboxes"><span>Checkboxes</span></div>
+          <div id="tool_upload" class="drag_tool" title="Click or drag to insert a File Upload button"><span>Upload File</span></div>		  
+        </fieldset>
+        <fieldset id="tool_group_magic" class="tool_group">
+          <legend>Magical</legend>
+          <div id="tool_email" class="drag_tool" title="Click or drag to insert an Email Address field"><span>Email Address</span></div>
+          <div id="tool_url" class="drag_tool" title="Click or drag to insert a Web Address field"><span>Web Address</span></div>
+          <div id="tool_date" class="drag_tool" title="Click or drag to insert a Date selector"><span>Date</span></div>
+          <div id="tool_listbox" class="drag_tool" title="Click or drag to insert a List Box"><span>List Box</span></div>
+		  <div id="tool_image" class="drag_tool" title="Click or drag to insert an Image"><span>Image</span></div>
+		  <div id="tool_phone" class="drag_tool" title="Click or drag to insert a Phone Number"><span>Phone Number</span></div>
+          <div id="tool_sectionbreak" class="drag_tool" title="Click or drag to insert a Section Break"><span>Section Break</span></div>
+          <div id="tool_spacer" class="drag_tool" title="Click or drag to insert a Spacer"><span>Spacer</span></div>
+   		  <div id="tool_regex" class="drag_tool" title="Click or drag to insert a Regular Expression Manager"><span>Reg. Expression</span></div>
+        </fieldset>
+        <fieldset id="tool_group_static" class="tool_group">
+          <legend>Static</legend>
+          <div id="tool_header"  class="controls_static" title="Click to show Header properties"><span>Header</span></div>
+          <div id="tool_footer"  class="controls_static" title="Click to show Footer properties"><span>Footer</span></div>   
+          <div id="tool_logo"  class="controls_static" title="Click to show Logo properties"><span>Logo</span></div>
+          <div id="tool_submit"  class="controls_static" title="Click to show Submit Button properties"><span>Submit</span></div>
+		  <div id="tool_captcha"  class="controls_static" title="Click to show Captcha properties"><span>Captcha</span></div>
+        </fieldset>
+		<fieldset style="display:none">
+		  <legend>Workflow</legend>
+		  <label><input type="checkbox" id="workflow_switcher"><span>  Show properties after insertion</span></label>
+		</fieldset>
+        <hr class="tool_group_divider">
+        <div id="tool_item_duplicate" class="action_tool" title="Duplicate the selected element">Duplicate</div>
+        <div id="tool_item_delete" class="action_tool" title="Delete the selected element">Delete</div>
+      </div>
+      <div id="tb_control_properties" class="controlpane"><fieldset id="control_properties_set"><p id="properties_placeholder">Select an element and its editable properties will appear here.</p></fieldset></div>
+      <div id="tb_form_properties" class="controlpane"></div>
+    </form>
+  </div>
+</body>
+</html>

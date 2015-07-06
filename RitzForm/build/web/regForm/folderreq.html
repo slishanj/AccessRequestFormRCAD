@@ -1,0 +1,65 @@
+<tr>
+                            <style type="text/css" >
+                                #folder:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <td id="folder" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('folderset');">
+                                FOLDER ACCESS ON L DRIVE
+                            </td>
+                            </tr>
+                            <style type="text/css">
+                                /*#folderset table{border-spacing: 0px;}*/
+                                #folderset table td{padding-left: 20px}
+                                #folderset input{float: right;padding-right: 5px}
+                            </style>
+                            <tr id="folderset" style="visibility: hidden;display: none" >
+                                <td style="padding: 5px;" colspan="6">
+                                    <table style="width: 100%" class="table table-striped">
+                                        <tr>
+                                            <td>AV<input style="" type="checkbox" name="accessList[]" value="folder_AV"/></td>
+                                            <td>Executive<input type="checkbox" name="accessList[]" value="folder_Exec"/></td>
+                                            <td>Guest Services<input type="checkbox" name="accessList[]" value="folder_Guest"/></td>
+                                            <td>PR<input type="checkbox" name="accessList[]" value="folder_PR"/></td>
+                                            <td>Rooms<input type="checkbox" name="accessList[]" value="folder_Rooms"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CCS<input type="checkbox" name="accessList[]" value="folder_CCS"/></td>
+                                            <td>F &amp; B<input type="checkbox" name="accessList[]" value="folder_FnB"/></td>
+                                            <td>HouseKeeping<input type="checkbox" name="accessList[]" value="folder_HSK"/></td>
+                                            <td>Public<input type="checkbox" name="accessList[]" value="folder_Public"/></td>
+                                            <td>Spa<input type="checkbox" name="accessList[]" value="folder_Spa"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Club Concierge<input type="checkbox" name="accessList[]" value="folder_Concierge"/></td>
+                                            <td>Finance<input type="checkbox" name="accessList[]" value="folder_Finance"/></td>
+                                            <td>Human Resources<input type="checkbox" name="accessList[]" value="folder_HR"/></td>
+                                            <td>Purchasing<input type="checkbox" name="accessList[]" value="folder_Purchasing"/></td>
+                                            <td>Villas<input type="checkbox" name="accessList[]" value="folder_Villas"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cost Control<input type="checkbox" name="accessList[]" value="folder_CostControl"/></td>
+                                            <td>Front Office<input type="checkbox" name="accessList[]" value="folder_FrontOffice"/></td>
+                                            <td>IT<input type="checkbox" name="accessList[]" value="folder_IT"/></td>
+                                            <td>RES_FD<input type="checkbox" name="accessList[]" value="folder_RES_FD"/></td>
+                                            <td>Engineering<input type="checkbox" name="accessList[]" value="folder_Engineering"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>GT<input type="checkbox" name="accessList[]" value="folder_GT"/></td>
+                                            <td>Laundry<input type="checkbox" name="accessList[]" value="folder_Laundry"/></td>
+                                            <td>Reservations<input type="checkbox" name="accessList[]" value="folder_Reservations"/></td>
+                                            <td>Everyone<input type="checkbox" name="accessList[]" value="folder_Everyone"/></td>
+                                            <td>Guest Relations<input type="checkbox" name="accessList[]" value="folder_GuestRelations"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sales<input type="checkbox" name="accessList[]" value="folder_Sales"/></td>
+                                            <td>Loss Prevention<input type="checkbox" name="accessList[]" value="folder_LP"/></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>

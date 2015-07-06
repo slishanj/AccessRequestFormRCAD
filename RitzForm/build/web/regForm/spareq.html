@@ -1,0 +1,42 @@
+<tr>
+                            <style type="text/css" >
+                                #spa:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                                #spaset td{width: max-content}
+                                #spaset input{
+                                    margin-left: 10px;
+                                }
+                            </style>
+                            <td id="spa" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('spaset');">
+                                SPA SOFT
+                            </td>
+                            </tr>
+                            <tr id="spaset" style="visibility: hidden;display: none;" >
+                                <td colspan="6">
+                                    <table class="table table-striped" style="table-layout: fixed">
+                                        <tr>
+                                            <td style="padding: 5px;">
+                                                Manager<input type="checkbox" name="accessList[]" value="Spa_Manager"/>
+                                            </td>
+                                            <td style="padding: 5px;">
+                                                Supervisor<input type="checkbox" name="accessList[]" value="Spa_Supervisor"/>
+                                            </td>
+                                            <td style="padding: 5px;">
+                                                Finance<input type="checkbox" name="accessList[]" value="Spa_Finance"/>
+                                            </td>
+                                            <td style="padding: 5px;">
+                                                IT<input type="checkbox" name="accessList[]" value="Spa_IT"/>
+                                            </td>
+                                            <td style="padding: 5px;">
+                                                Therapist<input type="checkbox" name="accessList[]" value="Spa_Therapist"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>

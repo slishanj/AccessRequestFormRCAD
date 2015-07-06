@@ -1,0 +1,40 @@
+<tr>
+                            <style type="text/css" >
+                                #vicas:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                                #vicasset input{
+                                    margin-left: 10px
+                                }
+                            </style>
+                            <td id="vicas" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('vicasset');">
+                                VICAS
+                            </td>
+                            </tr>
+                            <tr id="vicasset" style="visibility: hidden;display: none" >
+                                <td style="padding: 5px;" colspan="6" >
+                            <center>
+                                <table style="width: 100%" class="table table-striped">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td style="">
+                                            Front Office<input type="checkbox" name="accessList[]" value="VICAS_Frontoffice"/>
+                                        </td>
+                                        <td style="">
+                                            Back Office<input type="checkbox" name="accessList[]" value="VICAS_Backoffice"/>
+                                        </td>
+                                        <td>System Admin<input type="checkbox" name="accessList[]" value="VICAS_SystemAdmin"/></td>
+                                    </tr>
+                                </table>
+                            </center>
+                            </td>
+                            </tr>

@@ -1,0 +1,74 @@
+<script type="text/javascript">
+    function unhide() {
+        if (document.getElementById("emailaccessdata").style.visibility === "hidden") {
+            document.getElementById('emailaccessdata').style.display = 'table-cell';
+            document.getElementById("emailaccessdata").style.visibility = "visible";
+//                                                        document.getElementById("emaildisplayname").setAttribute("required", "true");
+//                                                        document.getElementById("emailaddress").setAttribute("required", "true");
+
+        } else {
+            document.getElementById("emailaccessdata").style.visibility = "hidden";
+            document.getElementById('emailaccessdata').style.display = 'none';
+            document.getElementById("emaildisplayname").value = "";
+            document.getElementById("emailaddress").value = "";
+//                                                        document.getElementById("emaildisplayname").removeAttribute = "required";
+//                                                        document.getElementById("emailaddress").removeAttribute = "required";
+
+        }
+    }
+</script>
+
+<table style="width: 100%;table-layout: fixed" class="table table-striped">
+    <tr style="">
+        <td style="padding: 5px">Computer Login</td>
+        <td style="padding: 5px"><input type="checkbox" name="accessList[]" value="LoginAccess"/></td>
+        <td style="padding: 5px">MS Office</td>
+        <td style="padding: 5px"><input type="checkbox" name="accessList[]" value="MSOfficeAccess"/></td>
+        <td style="padding: 5px">H Drive Access</td>
+        <td style="padding: 5px"><input type="checkbox" name="accessList[]" value="HDriveAccess"/></td>
+    </tr>
+
+    <tr style="">
+        <td style="padding: 5px">Email Access</td>
+        <td style="padding: 5px">
+            <input id="emailaccess" type="checkbox" name="accessList[]" value="EmailAccess"
+                   onclick="unhide();" />
+        </td>
+        <td style="padding: 5px;visibility: hidden;display:none;" colspan="4" id="emailaccessdata">
+            <table >
+                <tr>
+                    <td>
+                        <label class="control-label" >MailBox Display Name&nbsp;</label>
+                    </td>
+                    <td>
+                        <div id="notifEmailName" style="border: 1px solid red;visibility: hidden;height: fit-content;width: fit-content"></div>  
+                        <input class="form-control" id="emaildisplayname" type="text" name="emaildisplayname"
+                               style="width:285px;text-align: center;"
+                               placeholder="eg: RC, Abu Dhabi Concierge Supervisor"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label class=" control-label" > Email Address&nbsp;&nbsp;&nbsp;</label>
+                    </td>
+                    <td>
+                        <div class="input-group" style="width: 415px;">
+                            <input class="col-sm-6 form-control" id="emailaddress" 
+                                   type="text" 
+                                   name="emailaddress" placeholder="eg: rc.auhrz.concierge.sup"
+                                   style="width: 285px;text-align: center;"/>
+                            <span class="input-group-addon" style="">@ritzcarlton.com</span>
+                        </div>
+                        <div id="notifEmailAddress" style="border: 1px solid red;visibility: hidden;height: fit-content;width: fit-content"></div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 5px">Specify further notes</td>
+        <td style="padding: 5px" colspan="5">
+            <textarea rows="4" cols="50" name="basicnotes"></textarea>
+        </td>
+    </tr>
+</table>

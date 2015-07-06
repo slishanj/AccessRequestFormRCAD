@@ -1,0 +1,53 @@
+<tr>
+                            <style type="text/css" >
+                                #oasys:hover{
+                                    font-size: large;
+                                    color: blue;
+                                    text-decoration: underline;
+                                    cursor: pointer;
+                                }
+                                #oasysset input{
+                                    margin-left: 10px
+                                }
+                            </style>
+                            <td id="oasys" style="padding: 5px;text-align: center;font-weight: bolder"
+                                colspan="6" 
+                                onclick="VISIBILITY('oasysset');
+                                        VISIBILITY('oasysset_list');">
+                                OASYS PAYROLL & TIME ATTENDANCE
+                            </td>
+                            </tr>
+                            <tr id="oasysset" style="visibility: hidden;display: none" >
+                                <td style="padding: 5px;" colspan="6">
+                                    <table style="width: 100%" class="table table-striped">
+                                        <tr>
+                                            <td style="">
+                                                Payroll<input type="checkbox" name="accessList[]" value="OASYS_Payroll"/>
+                                                <br>Information Resources<input type="checkbox" name="accessList[]" value="OASYS_InfoSources"/>
+                                            </td>
+                                            <td style="">
+                                                Time Attendance<input type="checkbox" name="accessList[]" value="OASYS_TimeAttendance"/>
+                                            </td>
+                                            <td style="">
+                                                Human Resources<input type="checkbox" name="accessList[]" value="OASYS_HR"/>
+                                            </td>
+                                            <td style="">
+                                                HR Administrator<input type="checkbox" name="accessList[]" value="OASYS_HRAdmin"/>
+                                            </td>
+                                            <td style="">
+                                                EMG Report<input type="checkbox" name="accessList[]" value="OASYS_EMG"/>
+                                            </td>
+                                            <td style="">
+                                                Administration<input type="checkbox" name="accessList[]" value="OASYS_Administration"/>
+                                            </td>
+                                        </tr></table>
+                                </td>
+                            </tr>
+                            <tr id="oasysset_list" style="visibility: hidden;display: none" >
+                                <td style="padding-top: 5px;padding-bottom: 15px" colspan="6">
+                                    List Department you require access to (Mandatory)
+                                    <input class="form-control" type="text" name="oasysdeptList" required 
+                                           placeholder="" value="nil - do not edit this field if you are not using this system!"
+                                           style="width: 100%;border: 1px red ridge;"/>
+                                </td>
+                            </tr>
